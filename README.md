@@ -123,3 +123,6 @@ XTerm*colorUL        : _colorUL
 XTerm*foreground     : _foreground
 XTerm*background     : _background
 XTerm*cursorColor    : _cursorColor
+!---------------------------------------------------------------------------
+xrdb -remove
+xrdb -merge .Xresources
