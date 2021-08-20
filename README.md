@@ -124,5 +124,9 @@ XTerm*foreground     : _foreground
 XTerm*background     : _background
 XTerm*cursorColor    : _cursorColor
 !---------------------------------------------------------------------------
-xrdb -remove
-xrdb -merge .Xresources
+! Para que ele abra em tela toda
+! XTerm*Maximized: true
+
+
+! xrdb -remove
+! xrdb -merge .Xresources
