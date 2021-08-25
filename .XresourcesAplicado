@@ -1,0 +1,145 @@
+! this are Xresources to make xterm look good
+! put into ~/.Xresources
+! after changing contents, run 
+! # xrdb -merge .Xresources
+! ou
+! $ sudo xrdb -merge .Xresources
+! $[password]:
+!----------------------------------------------------------------
+! Para que ele abra em tela toda
+! XTerm*Maximized: true
+!--------------------------------------------------------------
+! Para carregar as alteracoes:
+! # xrdb -remove
+! # xrdb -merge .Xresources
+! # xrdb -merge ~/.Xresources
+! ou
+! $ sudo xrdb -merge .Xresources
+! $ [pass]:*******
+! 
+! --------------------------------------------------------------
+! gentoo has a bug so that it doesnt read it when X starts, so add above
+! command to /etc/xfce4/xinitrc (top) and be happy.
+
+! Barra de Rolagem
+! right hand side scrollbar...
+    xterm*rightScrollBar: true
+    xterm*ScrollBar: true
+
+! Only select text
+XTerm*highlightSelection: true
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+    xterm*loginshell: true
+
+! I like a LOT of scrollback...
+    xterm*savelines: 50000
+
+! double-click to select whole URLs :D
+    xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+
+XTerm*foreground: white
+! XTerm*background: rgb:22/22/22
+XTerm*background: rgb:01/01/01
+XTerm*cursorColor: rgb:00/ff/00
+XTerm*borderColor: black
+XTerm*scrollColor: black
+XTerm*visualBell: true
+XTerm*saveLines: 50000
+XTerm*allowSendEvents: True
+XTerm*sessionMgt: false
+XTerm*rightScrollBar: true
+XTerm*eightBitInput:  false
+XTerm*faceName:fixed:size=11
+XTerm*boldFont:fixed:size=11
+XTerm*activeIcon: true
+XTerm*iconPixmap: /usr/share/icons/locolor/16x16/apps/xterm.xbm
+! alteracao
+! XTerm*fullscreen: never
+
+! Tipo de fonte e tamanho de tela
+! XTerm*faceName: Bitstream Vera Serif Mono
+! xterm*faceSize: 11
+! xterm*vt100*geometry: 80x30
+
+! Configuracoes das fonte do menu:
+! Fonts ====================================================
+! set font and fontsize
+! XTerm*faceName: DejaVu Sans Mono
+! XTerm*faceSize: 16
+
+! VT Font Menu: Unreadable
+! xterm*faceSize1: 8
+! VT font menu: Tiny
+! xterm*faceSize2: 10
+! VT font menu: Medium
+! xterm*faceSize3: 12
+! VT font menu: Large
+! xterm*faceSize4: 16
+! VT font menu: Huge
+! xterm*faceSize5: 22
+
+! Cursor ====================================================
+! pointer and cursor (blinking and color)
+! XTerm*pointerColor: white
+! XTerm*pointerColorBackground: black
+! XTerm*cursorColor: white
+! XTerm*cursorBlink: true
+
+!! Selecting Text ========================================================
+! Only select text
+! XTerm*highlightSelection: true
+! Remove trailing spaces
+! XTerm*trimSelection: true
+
+!! Scrolling ========================================================
+! Use: Shift-Pageup / Shift-Pagedown to scroll or mousewheel
+! Lines of output that you can scroll back over
+! XTerm*saveLines: 16384
+
+! Turn the scrollbar on, and put it on the right
+! XTerm.vt100.scrollBar: true
+! XTerm.vt100.scrollbar.width: 8
+! xterm*scrollBar: true
+! xterm*rightScrollBar: true
+
+! atalhos de teclado
+!! Keybinding ========================================================
+! http://blog.rot13.org/2010/03/change-font-size-in-xterm-using-keyboard.html
+! - change fontsize on the fly (ctrl+plus = increase ; ctrl+minus = decrease, ctrl+0 = default)
+! - copy/paste hotkey (ctrl+shift+c = copy ; ctrl+shift+v = paste)
+! - open url (clickable links)
+!   1) double click to highlight the full url
+!   2) Shift + click it to open it
+! XTerm.vt100.translations: #override \n\
+!  Ctrl <Key> minus: smaller-vt-font() \n\
+!  Ctrl <Key> plus: larger-vt-font() \n\
+!  Ctrl <Key> 0: set-vt-font(d) \n\
+!  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+!  Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+!  Shift <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY) \n\
+!  <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+!  <Btn2Up>: insert-selection(PRIMARY)
+
+!  Selecao de texto
+!  enable copy/paste hotkey to work (shift+insert = paste ; mouse highlight = copy)
+!XTerm*selectToClipboard: true
+!  disable fullscreen hotkey alt+enter (hotkey conflicts with weechat, midnight commander ...etc)
+!XTerm*fullscreen: never
+!  enable alt key to work
+!XTerm*metaSendsEscape: true
+!  Fix the backspace key (for Emacs)
+!XTerm.vt100.backarrowKey: false
+!XTerm.ttyModes: erase ^?
+
+! Fim de alteracao
+
+
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.hintstyle:  hintfull
+Xft.lcdfilter:  lcdlegacy
+Xft.rgba:       rgb
+! Copiar e colar
+XTerm*selectToClipboard: true
