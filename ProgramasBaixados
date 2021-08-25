@@ -2,6 +2,7 @@
 # apt update
 # apt install firefox-esr
 O pacote de debian para o firefox
+# apt install lynx
 
 root@slax:~# dpkg --list
 Desired=Unknown/Install/Remove/Purge/Hold
