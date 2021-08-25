@@ -1,3 +1,8 @@
+# apt --purge remove chromium
+# apt update
+# apt install firefox-esr
+O pacote de debian para o firefox
+
 root@slax:~# dpkg --list
 Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
